@@ -17,10 +17,10 @@ namespace StatePattern
                 _bikeController.StartBike();
 
             if (GUILayout.Button("Turn Left"))
-                _bikeController.Turn(BikeDirection.Left);
+                _bikeController.Turn(Direction.Left);
 
             if (GUILayout.Button("Turn Right"))
-                _bikeController.Turn(BikeDirection.Right);
+                _bikeController.Turn(Direction.Right);
 
             if (GUILayout.Button("Stop Bike"))
                 _bikeController.StopBike();

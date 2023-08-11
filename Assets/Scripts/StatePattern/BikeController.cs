@@ -9,7 +9,7 @@ namespace StatePattern
         public float turnDistance = 2.0f;
 
         public float CurrentSpeed { get; set; }
-        public BikeDirection CurrentTurnDirection { get; private set; }
+        public Direction CurrentTurnDirection { get; private set; }
     
         private IBikeState _startState;
         private IBikeState _stopState;
@@ -37,7 +37,7 @@ namespace StatePattern
             _bikeStateContext.Transition(_stopState);
         }
 
-        public void Turn(BikeDirection direction)
+        public void Turn(Direction direction)
         {
             CurrentTurnDirection = direction;
             _bikeStateContext.Transition(_turnState);
